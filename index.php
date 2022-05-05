@@ -34,7 +34,7 @@
                     foreach ($callingproduct as $value){
                         ?>
                         <div class="col-3">
-                            <div class="card mb-3 bg-warning">
+                            <div class="card mb-3">
                             <img src="productimages/<?= $value['image'];?>" alt="" class="card-img-top" style="object-fit:cover; height:170px;"><hr>
                             <div class="card-body p-2">
                                 <h2 class="h4">
