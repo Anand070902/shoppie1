@@ -54,6 +54,7 @@ if(!isset($_SESSION['user'])){
                         $payable_amount -= $coupon_amount;
                     }
                     
+                    $_SESSION['payable_amount'] = $payable_amount;
 
                    ?>
                     <div class="row shadow mb-3">

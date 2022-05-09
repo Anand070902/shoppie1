@@ -110,7 +110,12 @@ if(!isset($_SESSION['user'])){
                             <p class="small m-0 p-0"><?= $value['landmark'];?></p>
                             <p class="small m-0 p-0"><?= $value['street'];?>, <?= $value['locality'];?>, <?= $value['district'];?> (<?= $value['state'];?>) - <?= $value['pincode'];?></p>
 
-                            <a href="" class="btn btn-info btn-sm mt-3">use this Address</a>
+                            <form action="PaytmKit/pgRedirect.php" method="post">
+                                <input type="text" name="user_id" value="<?=  $user_id; ?>" hidden>
+                                <input type="text" name="order_id" value="<?= uniqid();?>" hidden>
+                                <input type="text" name="amount" value="<?= $_SESSION['payable_amount'];?>" hidden>
+                                <input type="submit" class="btn btn-info btn-sm mt-3" value="use this address">
+                            </form>
                         </div>
                     </div>
 
